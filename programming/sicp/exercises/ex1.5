@@ -1,0 +1,17 @@
+Exercise 1.5
+
+```
+(define (p) (p))
+
+(define (test x y)
+    (if (= x 0)
+        0
+        y))
+
+(test 0 (p))
+```
+
+When applicative order evaluation is used, the interpreter will want to evaluate the value of (p).
+(p) is defined in terms of (p) - the interpretor will run in an infinite loop and likely produce an error.
+
+During normal order evaluation, we will never need to find the value of (p) - since the condition in the clause is true, 0 will be returned.

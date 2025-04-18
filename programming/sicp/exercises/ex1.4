@@ -1,0 +1,12 @@
+# Exercise 1.4
+
+```
+(define (a-plus-abs-b a b)
+    ((if (> b 0) + -) a b))
+```
+
+In this procedure the *if* construct is used to decide which operator will be used to operate on the operands a and b.
+If b > 0, a is added to b (+ operator is chosen)
+If b <=0, b is negative and it is subtracted from a (- operator is chosen)
+
+Effectively the procedure produces **a + |b|** mathematically
